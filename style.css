@@ -1,0 +1,335 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff;
+    background: url('assets/images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: rgba(0,0,0,0.85);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 8px #00d4ff, 0 0 12px #007bff;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 11;
+}
+
+/* =========================
+   NAV MENU
+========================= */
+#main-nav {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 300px; max-width: 80%;
+    height: 100%;
+    background: rgba(34,34,34,0.95);
+    backdrop-filter: blur(4px);
+    padding: 4rem 1rem;
+    box-shadow: -2px 0 20px rgba(0,0,0,0.5);
+    transition: right 0.4s ease;
+    z-index: 9;
+    overflow-y: auto;
+}
+
+#main-nav.open { right: 0; }
+#main-nav ul { list-style: none; padding: 0; margin: 0; }
+#main-nav li {
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: 0.5s ease;
+}
+#main-nav.open li { opacity: 1; transform: translateX(0); }
+#main-nav a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+#main-nav a:hover {
+    background: #007bff;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+main { margin-top: 0; width: 100%; }
+
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+}
+
+section.visible { opacity: 1; transform: translateY(0); }
+
+/* =========================
+   INFO BOX
+========================= */
+.info-box {
+    width: 95%; max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+.info-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00d4ff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.community-link a, .join-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+    min-width: 150px;
+}
+
+.community-link a.visible, .join-btn.visible {
+    opacity: 1; transform: translateY(0);
+}
+
+.community-link a {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    margin: 1rem auto;
+    box-shadow: 0 0 8px #00d4ff;
+}
+
+.community-link a:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #00d4ff;
+    box-shadow: 0 0 25px #00d4ff, 0 0 50px #00d4ff;
+}
+
+.join-btn {
+    background: linear-gradient(135deg, #28a745, #85e085);
+    color: white;
+    font-size: 0.85rem;
+    box-shadow: 0 0 8px #85e085;
+}
+
+.join-btn:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #85e085;
+    box-shadow: 0 0 25px #85e085, 0 0 50px #28a745;
+}
+
+/* =========================
+   GROUP LIST
+========================= */
+ul.group-list {
+    list-style: none;
+    padding: 0;
+    width: 95%; max-width: 100%;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+ul.group-list li {
+    background: rgba(0,0,0,0.6);
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 0 8px #00d4ff;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+ul.group-list li.visible { opacity: 1; transform: translateY(0); }
+ul.group-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #ff6ec7, 0 0 40px #ff6ec7;
+}
+
+ul.group-list li p {
+    margin: 0;
+    flex: 1;
+    padding-right: 0.5rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+/* =========================
+   TITLES SPARKLE & NEON
+========================= */
+section h2 {
+    color: #00d4ff;
+    text-shadow: 0 0 8px #00d4ff, 0 0 15px #007bff;
+    transition: 0.3s;
+}
+section h2:hover {
+    text-shadow: 0 0 20px #ff6ec7, 0 0 40px #ff6ec7;
+}
+.sparkle { animation: twinkle 1.5s infinite alternate; }
+@keyframes twinkle {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* =========================
+   PARTICLES
+========================= */
+.particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    animation: float 6s linear infinite;
+}
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh) translateX(50px); opacity: 0; }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+@media (max-width: 1024px) { section { padding: 2rem 1.5rem; } }
+@media (max-width: 768px) {
+    header { flex-direction: row; padding: 1rem 1.5rem; }
+    ul.group-list li { flex-direction: column; align-items: flex-start; margin-bottom: 0.8rem; }
+    .join-btn, .community-link a { width: 100%; text-align: center; margin: 0.5rem 0 0 0; }
+    #main-nav { width: 80%; max-width: 280px; padding-top: 3rem; }
+}
+@media (max-width: 480px) {
+    header h1 { font-size: 22px; }
+    .menu-toggle { font-size: 26px; }
+    section { padding: 1.5rem 1rem; }
+    ul.group-list { width: 95%; }
+}
+@media (max-width: 360px) { section { padding: 1rem 0.5rem; } }
+/* =========================
+   FOOTER SOCIAL BUTTONS
+========================= */
+.footer-buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-buttons a.social-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+    color: #fff;
+    min-width: 160px;
+}
+
+.footer-buttons a.instagram {
+    background: linear-gradient(135deg, #e1306c, #fd1d1d);
+    box-shadow: 0 0 8px #fd1d1d;
+}
+
+.footer-buttons a.instagram:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #fd1d1d;
+    box-shadow: 0 0 25px #fd1d1d, 0 0 50px #e1306c;
+}
+
+.footer-buttons a.youtube {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    box-shadow: 0 0 8px #ff0000;
+}
+
+.footer-buttons a.youtube:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #ff0000;
+    box-shadow: 0 0 25px #ff0000, 0 0 50px #cc0000;
+  }
