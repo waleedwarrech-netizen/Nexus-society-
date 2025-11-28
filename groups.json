@@ -1,0 +1,20 @@
+{
+  "info": [
+    "🎮 Play & Connect: Meet gamers and anime fans worldwide.",
+    "🏆 Events & Tournaments: Show your skills and win rewards.",
+    "✨ Share Creativity: Post edits, AMVs, and fan art.",
+    "💬 Casual Chats: Make friends and join lively discussions.",
+    "📢 Stay Updated: Exclusive news, tips, and community updates.",
+    "🗳️ Have Your Say: Vote and share ideas in Feedback Lounge.",
+    "🔒 Safe & Fun: No spam, no NSFW, just positive vibes."
+  ],
+  "groups": [
+    {"name": "Nexus Gamers Hub", "desc": "Meet gamers & enjoy epic matches.", "link": "https://chat.whatsapp.com/EhrYQKazLRkLnLoWbSVwEL?mode=hqrt2"},
+    {"name": "Nexus Management", "desc": "Only for admins to collaborate.", "link": "https://chat.whatsapp.com/JQfIM0geke3Hk4rhMWCeRC?mode=hqrt2"},
+    {"name": "Nexus Chillzone", "desc": "Relax, chat, & make friends.", "link": "https://chat.whatsapp.com/DoG3B5kSPEZ1LJPFQRKl3u?mode=hqrt2"},
+    {"name": "Nexus Edits Studio", "desc": "Share edits, AMVs & creative content.", "link": "https://chat.whatsapp.com/Be32ccdNMxn5WeJQ6V6WuT?mode=hqrt2"},
+    {"name": "Nexus Tournaments", "desc": "Compete & win exciting rewards.", "link": "https://chat.whatsapp.com/KcG6i7U1AGd6UGwYjKMhQA?mode=hqrt2"},
+    {"name": "Nexus Feedback Lounge", "desc": "Share ideas & vote on improvements.", "link": "https://chat.whatsapp.com/CvMuMyrNFM4Fq0yQK8CaKf?mode=hqrt2"},
+    {"name": "🎌🎨 Nexus Anime Addiction 🎨🎌", "desc": "Connect with anime fans & discuss shows.", "link": "https://chat.whatsapp.com/G8pvIu4VTinGqzmhQcqLnj?mode=hqrt2"}
+  ]
+}
